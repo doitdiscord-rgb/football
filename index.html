@@ -131,73 +131,73 @@
 
     <!-- 1) Setup Screen -->
     <div id="setup-screen" class="p-6 sm:p-8 text-center">
-      <h1 class="text-4xl font-black title-gradient mb-2">Football Imposter</h1>
-      <p class="text-sm text-slate-300 mb-6">Pass & play social-deduction party game</p>
+      <h1 class="text-4xl font-black title-gradient mb-2">ทายชื่อนักฟุตบอล</h1>
+      <p class="text-sm text-slate-300 mb-6">เล่นในโทรศัพท์เครื่องเดียวระบบ pass&play</p>
 
-      <p class="text-lg text-gray-300 mb-3">How many players?</p>
+      <p class="text-lg text-gray-300 mb-3">กี่คน?</p>
       <div class="flex items-center justify-center gap-4 mb-5">
         <button id="decrease-player-btn" class="btn-adjust">−</button>
         <span id="player-count-display" class="text-4xl font-black w-16 text-center">6</span>
         <button id="increase-player-btn" class="btn-adjust">+</button>
       </div>
-      <p class="text-lg text-gray-300 mb-6">Enter <span id="player-count-label">6</span> player names to begin.</p>
+      <p class="text-lg text-gray-300 mb-6">Enter <span id="player-count-label">5</span> ชื่อผู้เล่นเพื่อเริ่ม</p>
 
       <div id="player-inputs-container" class="space-y-3 mb-8"></div>
-      <button id="start-game-btn" class="btn btn-category">Start Game</button>
+      <button id="start-game-btn" class="btn btn-category">เริ่มเกม</button>
     </div>
 
     <!-- 2) Category Screen -->
     <div id="category-screen" class="hidden p-6 sm:p-8 text-center">
-      <h2 class="text-3xl font-bold mb-6">Choose a Category</h2>
+      <h2 class="text-3xl font-bold mb-6">หมวดหมู่</h2>
       <div class="space-y-4">
-        <button id="legends-btn" class="btn btn-category">Football Legends</button>
-        <button id="pl-btn" class="btn btn-category">Premier League</button>
+        <button id="legends-btn" class="btn btn-category">นักเตะตำนาน</button>
+        <button id="pl-btn" class="btn btn-category">นักเตะพรีเมียร์ลีก</button>
       </div>
     </div>
 
     <!-- 3) Role Reveal Screen -->
     <div id="reveal-screen" class="hidden p-6 sm:p-8 text-center">
-      <h2 class="text-3xl font-bold mb-2">Pass to…</h2>
+      <h2 class="text-3xl font-bold mb-2">ส่งให้…</h2>
       <p id="player-turn-name" class="text-5xl font-black text-blue-400 mb-6"></p>
 
-      <button id="tap-to-reveal-btn" class="btn btn-reveal">Tap to Reveal</button>
+      <button id="tap-to-reveal-btn" class="btn btn-reveal">เปิดเพื่อเฉลย</button>
 
       <div id="role-display" class="hidden min-h-[150px] flex flex-col items-center justify-center bg-gray-900/70 rounded-xl p-4 mt-4 ring-1 ring-slate-700">
         <p id="player-role" class="text-2xl font-bold uppercase"></p>
-        <p id="word-label" class="text-lg text-gray-300 mb-2">Your word is:</p>
+        <p id="word-label" class="text-lg text-gray-300 mb-2">คำของคุณคือ:</p>
         <p id="player-word" class="text-4xl font-extrabold text-emerald-400"></p>
       </div>
 
-      <button id="hide-and-pass-btn" class="btn btn-category hidden mt-8">Hide & Pass to Next Player</button>
+      <button id="hide-and-pass-btn" class="btn btn-category hidden mt-8">อย่าให้คนอื่นเห็นดูเสร็จเเล้วส่งให้คนต่อไป</button>
     </div>
 
     <!-- 4) Discussion Screen -->
     <div id="discussion-screen" class="hidden p-6 sm:p-8 text-center">
-      <h2 class="text-4xl font-bold mb-4">Discuss!</h2>
+      <h2 class="text-4xl font-bold mb-4">หา IMPOSTER!</h2>
       <p class="text-lg text-gray-300 mb-6">Everyone has their role. Start talking! Give one-word clues about your word.</p>
-      <p class="text-md text-gray-400 mb-8">The <span class="text-emerald-400 font-bold">CREW</span> must find the imposter.
-        <br />The <span class="text-red-500 font-bold">IMPOSTER</span> must blend in and guess the crew's word.</p>
-      <button id="show-reveal-btn" class="btn btn-category">Ready to Reveal</button>
+      <p class="text-md text-gray-400 mb-8">คนดี <span class="text-emerald-400 font-bold">ต้องหา</span> IMPOSTER.
+        <br />The <span class="text-red-500 font-bold">IMPOSTER</span> ต้องเนียนในกลุ่มคนดีเเละทายชื่อนักเตะ.</p>
+      <button id="show-reveal-btn" class="btn btn-category">พร้อมเฉลย</button>
     </div>
 
     <!-- 5) End Screen -->
     <div id="end-screen" class="hidden p-6 sm:p-8 text-center">
-      <h2 class="text-4xl font-bold mb-6">The Reveal!</h2>
-      <p class="text-lg text-gray-300">The Imposter was…</p>
+      <h2 class="text-4xl font-bold mb-6">เฉลย!</h2>
+      <p class="text-lg text-gray-300">IMPOSTER คือ…</p>
       <p id="imposter-name" class="text-5xl font-black text-red-500 my-4"></p>
 
       <div class="bg-gray-900/70 rounded-xl p-4 space-y-3 ring-1 ring-slate-700">
         <div>
-          <p class="text-sm text-gray-400 uppercase">The Crew's Word:</p>
+          <p class="text-sm text-gray-400 uppercase">คำของคนดี:</p>
           <p id="crew-word" class="text-2xl font-bold text-emerald-400"></p>
         </div>
         <div>
-          <p class="text-sm text-gray-400 uppercase">The Imposter's Word:</p>
+          <p class="text-sm text-gray-400 uppercase">คำของ IMPOSTER:</p>
           <p id="imposter-word" class="text-2xl font-bold text-red-500"></p>
         </div>
       </div>
 
-      <button id="play-again-btn" class="btn btn-category mt-8">Play Again</button>
+      <button id="play-again-btn" class="btn btn-category mt-8">เล่นใหม่</button>
     </div>
 
   </div>
@@ -237,19 +237,19 @@
     // ========= GAME DATA =========
     const gameData = {
       legends: [
-        { crewWord: 'Pelé', imposterWord: 'Imposter' },
-        { crewWord: 'Zinedine Zidane', imposterWord: 'Imposter' },
-        { crewWord: 'Paolo Maldini', imposterWord: 'Imposter' },
-        { crewWord: 'Diego Maradona', imposterWord: 'Imposter' },
-        { crewWord: 'Johan Cruyff', imposterWord: 'Imposter' },
-        { crewWord: 'Lev Yashin', imposterWord: 'Imposter' }
+        { crewWord: 'Pelé', imposterWord: 'IMPOSTER' },
+        { crewWord: 'Zinedine Zidane', imposterWord: 'IMPOSTER' },
+        { crewWord: 'Paolo Maldini', imposterWord: 'IMPOSTER' },
+        { crewWord: 'Diego Maradona', imposterWord: 'IMPOSTER' },
+        { crewWord: 'Johan Cruyff', imposterWord: 'IMPOSTER' },
+        { crewWord: 'Lev Yashin', imposterWord: 'IMPOSTER' }
       ],
 
       // *** Premier League: expanded list ***
       // Each entry is a word for the CREW while the IMPOSTER only sees "IMPOSTER".
       pl: [
         'Thierry Henry','Wayne Rooney','Steven Gerrard','Frank Lampard','Alan Shearer','Didier Drogba','Mohamed Salah','Kevin De Bruyne','Virgil van Dijk','Erling Haaland','Bukayo Saka','Son Heung-min','Bruno Fernandes','Alisson Becker','Rodri','Declan Rice','Cole Palmer','Dennis Bergkamp','Eric Cantona','Roy Keane','Patrick Vieira','Ryan Giggs','Paul Scholes','John Terry','Peter Schmeichel','Sergio Agüero','Vincent Kompany','Yaya Touré','David Silva','Nemanja Vidić','Rio Ferdinand','Ashley Cole','Petr Čech','Edwin van der Sar','Jamie Vardy','Riyad Mahrez','N\'Golo Kanté','Eden Hazard','Luis Suárez','Fernando Torres','Xabi Alonso','Cesc Fàbregas','Robin van Persie','Dimitar Berbatov','Carlos Tevez','Michael Owen','Robbie Fowler','Ian Wright','Matt Le Tissier','Teddy Sheringham','Andy Cole','Dwight Yorke','Sol Campbell','Tony Adams','David Seaman','Gary Neville','Jamie Carragher','Sami Hyypiä','Gianfranco Zola','Jimmy Floyd Hasselbaink','Claude Makélélé','Michael Essien','Ricardo Carvalho','Robert Pirès','Freddie Ljungberg','David Beckham','Cristiano Ronaldo','Gareth Bale','Luka Modrić','Harry Kane','Kyle Walker','Trent Alexander-Arnold','Andrew Robertson','Sadio Mané','Roberto Firmino','Bernardo Silva','Raheem Sterling','Jack Grealish','Phil Foden','Marcus Rashford','David de Gea','James Maddison','Ollie Watkins','Alexander Isak','Bruno Guimarães','Kieran Trippier','Reece James','Ben Chilwell','Gabriel Martinelli','Martin Ødegaard','William Saliba','Alexis Mac Allister','Dominik Szoboszlai','Lucas Paquetá','Jarrod Bowen','Douglas Luiz','Rúben Dias','John Stones','Ederson','Allan Saint-Maximin','Dele Alli','Heung-min Son','João Cancelo','Ilkay Gündoğan','João Moutinho','Rúben Neves','Jordan Henderson','Trent Alexander-Arnold','Andy Robertson','Fabinho','Virgil van Dijk','James Milner','Fernandinho','Pablo Zabaleta','Yohan Cabaye','Ashley Young','Antonio Valencia','Juan Mata','Park Ji-sung','Nemanja Matić','Wes Brown','Nani','Patrice Evra','Michael Carrick','Gary Cahill','John Obi Mikel','César Azpilicueta','Branislav Ivanović','Marcos Alonso','Theo Walcott','Santi Cazorla','Alexis Sánchez','Olivier Giroud','Seamus Coleman','Leighton Baines','Tim Cahill','Gylfi Sigurðsson','Romelu Lukaku','Pape Cissé','Shay Given','Les Ferdinand','David Ginola','Alan Shearer'
-      ].map(n => ({ crewWord: n, imposterWord: 'Imposter' }))
+      ].map(n => ({ crewWord: n, imposterWord: 'IMPOSTER' }))
     };
 
     // ========= STATE =========
@@ -457,7 +457,7 @@
       }
 
       if ((location.hash||'').toLowerCase().includes('test')) {
-        console.group('Football Imposter — Dev Tests');
+        console.group('Test by Arnal');
         runTests();
         console.groupEnd();
       }
